@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #27261f;
+  background: #eae5d9;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: radial-gradient(#bdb6a6 0.5px, transparent 0.5px);
+  background-size: 5px 5px;
+}
+.app {
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 5vw 80px;
+}
+.masthead {
+  height: 76px;
+  border-bottom: 1px solid #393a30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font:
+    500 11px "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.brand::before {
+  content: "✳";
+  font-size: 20px;
+  vertical-align: -2px;
+  margin-right: 10px;
+  color: #c64b2b;
+}
+.edition {
+  text-align: right;
+  color: #67675e;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  align-items: end;
+  gap: 40px;
+  padding: 80px 0 54px;
+}
+.eyebrow,
+.section-index,
+.rules-title {
+  font:
+    500 11px "DM Mono",
+    monospace;
+  letter-spacing: 0.13em;
+  color: #a54228;
+}
+.eyebrow::before {
+  content: "●";
+  margin-right: 9px;
+}
+h1 {
+  max-width: 840px;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.085em;
+  margin: 25px 0;
+  font-weight: 800;
+}
+.intro {
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #55574d;
+  margin: 0;
+}
+.hero-symbol {
+  aspect-ratio: 1;
+  border: 1px solid #2b2c25;
+  border-radius: 50%;
+  background: #d8e064;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(10deg);
+}
+.hero-symbol span {
+  font-size: 126px;
+  line-height: 0.9;
+  font-weight: 800;
+}
+.hero-symbol small {
+  font:
+    500 9px "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  margin-top: 12px;
+}
+.rules {
+  border-top: 1px solid #33352c;
+  border-bottom: 1px solid #33352c;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.45fr;
+  gap: 25px;
+  align-items: center;
+  padding: 18px 0;
+}
+.rules p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+.board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+  align-items: start;
+}
+.card {
+  background: #f6f3eb;
+  border: 1px solid #383a30;
+  padding: clamp(24px, 3.5vw, 48px);
+  min-width: 0;
+}
+.scores {
+  background: #d8e064;
+}
+.section-index {
+  margin: 0 0 38px;
+}
+h2 {
+  margin: 0 0 9px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+h3 {
+  font-size: 16px;
+  margin: 38px 0 10px;
+}
+.muted {
+  color: #68695e;
+  line-height: 1.5;
+  font-size: 13px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+  margin-top: 40px;
+}
+label {
+  display: grid;
+  gap: 10px;
+  font:
+    500 11px "DM Mono",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 0;
+}
+input,
+select {
+  width: 100%;
+  border: 1px solid #929386;
+  background: transparent;
+  color: #27261f;
+  padding: 15px;
+  font:
+    600 15px "Manrope",
+    sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+form > .muted,
+form > .error {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+form > button {
+  grid-column: 1 / -1;
+}
+button {
+  border: 1px solid #292b23;
+  padding: 17px 20px;
+  background: #292b23;
+  color: #fffdf4;
+  font:
+    700 13px "Manrope",
+    sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+button::after {
+  content: "↗";
+  float: right;
+  font-size: 17px;
+  line-height: 1;
+}
+button:hover {
+  background: #a54228;
+  border-color: #a54228;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #a54228;
+  outline-offset: 3px;
+}
+.secondary {
+  color: #292b23;
+  background: transparent;
+  margin-top: 26px;
+  width: 100%;
+}
+.secondary:hover {
+  color: #fff;
+}
+.history {
+  padding-left: 25px;
+  margin: 25px 0 0;
+}
+.history li {
+  padding: 14px 0;
+  border-bottom: 1px solid #a5a599;
+  font-size: 13px;
+}
+.history li strong {
+  letter-spacing: 0.08em;
+}
+.history li span {
+  float: right;
+  color: #626459;
+}
+.error {
+  color: #a54228;
+  min-height: 1em;
+  font-size: 13px;
+}
+.success {
+  color: #466329;
+  font-weight: 700;
+}
+.empty {
+  border-top: 1px solid #73794b;
+  margin: 55px 0 0;
+  padding: 20px 0 0;
+  color: #4c5431;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .app {
+    padding: 0 20px 40px;
+  }
+  .masthead {
+    height: 62px;
+  }
+  .edition {
+    font-size: 9px;
+  }
+  .hero {
+    grid-template-columns: 1fr 95px;
+    gap: 10px;
+    padding: 55px 0 40px;
+  }
+  h1 {
+    font-size: clamp(3.6rem, 13vw, 6rem);
+  }
+  .hero-symbol span {
+    font-size: 55px;
+  }
+  .hero-symbol small {
+    font-size: 5px;
+    margin-top: 5px;
+  }
+  .rules {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .board {
+    grid-template-columns: 1fr;
+  }
+  .section-index {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 400px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-symbol {
+    display: none;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  form > * {
+    grid-column: 1;
+  }
+  .history li span {
+    display: block;
+    float: none;
+    margin-top: 5px;
+  }
+}
+/* A quieter palette and softer edges keep the focus on the game. */
+:root {
+  background: #f7f3eb;
+  color: #29332d;
+}
+body {
+  background-image: none;
+}
+.masthead,
+.rules {
+  border-color: #c9d0c4;
+}
+.brand::before {
+  color: #c5724b;
+}
+.hero {
+  padding-top: 55px;
+  padding-bottom: 42px;
+}
+h1 {
+  letter-spacing: -0.065em;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+}
+.hero-symbol {
+  background: #e6b185;
+  border-color: #ad785c;
+  transform: rotate(6deg);
+}
+.hero-symbol span {
+  color: #44392f;
+}
+.eyebrow,
+.section-index,
+.rules-title {
+  color: #9a533a;
+}
+.card {
+  background: #fffdfa;
+  border-color: #d6ddd2;
+  border-radius: 14px;
+}
+.scores {
+  background: #e7eee2;
+}
+button {
+  background: #425f4e;
+  border-color: #425f4e;
+  border-radius: 6px;
+}
+button:hover {
+  background: #304b3c;
+  border-color: #304b3c;
+}
+input,
+select {
+  border-color: #bac6b8;
+  border-radius: 6px;
+}
+.secondary {
+  background: transparent;
+  color: #425f4e;
+}
+.empty {
+  border-color: #b5c5b0;
+}
